@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FALA IRMÃO · Ropa americana de primera calidad — Córdoba</title>
+  <meta name="description" content="FALA IRMÃO — ropa americana usada de primera calidad. Moda urbana vintage: 80s, 90s, oversize y retro. Piezas únicas, curadas una por una. Córdoba, Argentina." />
+  <meta name="theme-color" content="#26304C" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FALA IRMÃO · Ropa americana de primera calidad" />
+  <meta property="og:description" content="Vintage, 90s, oversize y retro. No vendemos ropa: encontramos joyitas. Córdoba, Argentina." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/hero-mascota.jpg" />
+
+  <!-- Favicon (óvalo FI) -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23C0B6AA'/%3E%3Cellipse cx='32' cy='32' rx='27' ry='20' fill='none' stroke='%233F6A61' stroke-width='2.5' transform='rotate(-4 32 32)'/%3E%3Ctext x='32' y='40' font-family='Arial Black,sans-serif' font-size='22' font-weight='900' text-anchor='middle' fill='%231C1813'%3EFI%3C/text%3E%3Ccircle cx='47' cy='39' r='2.4' fill='%237E8B3F'/%3E%3C/svg%3E" />
+
+  <!-- Tipografías -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sand: "#C0B6AA", "sand-2": "#CDBFB0",
+            cream: "#EFE8DA", "cream-2": "#F6F1E6",
+            bordo: "#7B2E3B", "bordo-2": "#5C2029",
+            navy: "#26304C", "navy-2": "#1A2238",
+            petrol: "#3F6A61", olive: "#7E8B3F",
+            ink: "#1C1813", muted: "#5B5044"
+          },
+          fontFamily: {
+            display: ["Anton", "sans-serif"],
+            logo: ['"Archivo Black"', "sans-serif"],
+            marker: ['"Permanent Marker"', "cursive"],
+            body: ["Archivo", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- Marca JS activo: el efecto reveal solo oculta contenido si JS puede volver a mostrarlo -->
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+
+<body class="font-body antialiased">
+
+  <!-- ================= BARRA SUPERIOR ================= -->
+  <div class="bg-bordo text-cream-2 text-[11px] sm:text-xs">
+    <div class="marquee py-2 font-logo tracking-[.14em] uppercase">
+      <div class="marquee__track">
+        <span class="marquee__item">Ropa americana de primera calidad</span><span class="marquee__item text-olive">★</span>
+        <span class="marquee__item">Envíos a todo el país</span><span class="marquee__item text-olive">★</span>
+        <span class="marquee__item">15% OFF en tu segunda compra</span><span class="marquee__item text-olive">★</span>
+        <span class="marquee__item">Piezas únicas — no hay dos iguales</span><span class="marquee__item text-olive">★</span>
+        <span class="marquee__item">@falairmao_</span><span class="marquee__item text-olive">★</span>
+      </div>
+      <div class="marquee__track" aria-hidden="true">
+        <span class="marquee__item">Ropa americana de primera calidad</span><span class="marquee__item text-olive">★</span>
+        <span class="marquee__item">Envíos a todo el país</span><span class="marquee__item text-olive">★</span>
+        <span class="marquee__item">15% OFF en tu segunda compra</span><span class="marquee__item text-olive">★</span>
+        <span class="marquee__item">Piezas únicas — no hay dos iguales</span><span class="marquee__item text-olive">★</span>
+        <span class="marquee__item">@falairmao_</span><span class="marquee__item text-olive">★</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= HEADER / NAV ================= -->
+  <header id="header" class="sticky top-0 z-50 border-b border-transparent">
+    <nav class="max-w-6xl mx-auto px-5 sm:px-8 h-[70px] flex items-center justify-between">
+      <a href="#inicio" class="oval-logo text-[15px]" aria-label="FALA IRMÃO — inicio">
+        <span>FALA</span><span>IRMÃO<span class="dot">.</span></span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-logo uppercase tracking-wider">
+        <a href="#inicio"   class="nav-link active">Inicio</a>
+        <a href="#nosotros" class="nav-link">Nosotros</a>
+        <a href="#prendas"  class="nav-link">Prendas</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </div>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a data-ig target="_blank" rel="noopener" class="btn btn-ghost !py-2.5 !px-4 text-[11px]">Instagram</a>
+        <a data-wa target="_blank" rel="noopener" class="btn btn-bordo !py-2.5 !px-4 text-[11px]">Comprar</a>
+      </div>
+
+      <!-- Hamburguesa -->
+      <button id="burger" class="burger md:hidden p-2 -mr-2" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Menú móvil -->
+    <div id="mobileMenu" class="md:hidden bg-sand-2/95 backdrop-blur border-t border-ink/10">
+      <div class="px-6 py-5 flex flex-col gap-4 font-logo uppercase tracking-wider text-sm">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#prendas">Prendas</a>
+        <a href="#contacto">Contacto</a>
+        <div class="flex gap-3 pt-2">
+          <a data-ig target="_blank" rel="noopener" class="btn btn-ghost !py-2.5 !px-4 text-[11px] flex-1 justify-center">Instagram</a>
+          <a data-wa target="_blank" rel="noopener" class="btn btn-bordo !py-2.5 !px-4 text-[11px] flex-1 justify-center">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO / INICIO ================= -->
+  <section id="inicio" class="relative grain overflow-hidden">
+    <div class="ghost-word absolute -top-6 left-0 text-[26vw] sm:text-[20vw] leading-none select-none z-0">FALA</div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8 pt-14 pb-8 md:py-20 grid md:grid-cols-2 gap-8 md:gap-6 items-center">
+      <!-- Texto -->
+      <div class="reveal">
+        <span class="pill text-bordo mb-5"><span class="w-1.5 h-1.5 rounded-full bg-bordo"></span>Córdoba, Argentina · Ropa americana</span>
+        <h1 class="font-display text-ink uppercase leading-[.92] text-5xl sm:text-6xl lg:text-7xl mt-4">
+          Ropa usada de <span class="text-bordo">primera</span> calidad
+        </h1>
+        <p class="font-marker text-2xl sm:text-3xl text-navy mt-4">La ropa americana más barata de Córdoba</p>
+        <p class="text-muted text-base sm:text-lg max-w-md mt-5">
+          Moda urbana vintage — <strong class="text-ink">80s, 90s, oversize y retro</strong>.
+          Le damos una segunda oportunidad a prendas que todavía tienen mucho por contar.
+        </p>
+
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a data-wa target="_blank" rel="noopener" class="btn btn-bordo">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-1-.3-1.6-.6-2.9-1.3-4.8-4.2-4.9-4.4-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.7-.9c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3Z"/></svg>
+            Comprar por WhatsApp
+          </a>
+          <a href="#prendas" class="btn btn-ghost">Ver prendas</a>
+        </div>
+
+        <div class="flex flex-wrap gap-x-6 gap-y-2 mt-8 text-xs font-logo uppercase tracking-wider text-muted">
+          <span>◆ Piezas únicas</span>
+          <span>◆ Curadas 1 x 1</span>
+          <span>◆ Segunda vida</span>
+        </div>
+      </div>
+
+      <!-- Imagen mascota (fondo beige = mismo tono de la web, se funde) -->
+      <div class="reveal relative flex justify-center md:justify-end">
+        <img src="assets/img/hero-mascota.jpg" alt="Personaje FALA IRMÃO con campera vintage, buzo y bucket hat"
+             class="w-[78%] sm:w-[62%] md:w-full max-w-[440px] select-none" draggable="false" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CINTA MARQUEE ================= -->
+  <div class="bg-navy text-cream-2 border-y-2 border-navy-2">
+    <div class="marquee py-3.5 font-display uppercase text-lg sm:text-xl tracking-wide">
+      <div class="marquee__track">
+        <span class="marquee__item">Vintage</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">90s</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">Oversize</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">80s</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">Retro</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">Únicas</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">Streetwear</span><span class="marquee__item text-bordo">✦</span>
+      </div>
+      <div class="marquee__track" aria-hidden="true">
+        <span class="marquee__item">Vintage</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">90s</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">Oversize</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">80s</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">Retro</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">Únicas</span><span class="marquee__item text-bordo">✦</span>
+        <span class="marquee__item">Streetwear</span><span class="marquee__item text-bordo">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CÓMO FUNCIONA ================= -->
+  <section class="bg-cream-2 py-16 sm:py-20">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal max-w-2xl">
+        <span class="pill text-petrol mb-4">Cómo funciona</span>
+        <h2 class="font-display uppercase text-4xl sm:text-5xl leading-[.95] text-ink">
+          No vendemos ropa. <span class="mark-underline">Encontramos joyitas.</span>
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-5 mt-10">
+        <!-- card 1 -->
+        <div class="reveal frame rounded-2xl p-7">
+          <div class="w-11 h-11 rounded-full bg-bordo text-cream-2 grid place-content-center font-display text-xl">01</div>
+          <h3 class="font-logo text-lg mt-5 text-ink">Se publican como hallazgos</h3>
+          <p class="text-muted mt-2 text-sm leading-relaxed">Cada prenda aparece en nuestro Instagram como un hallazgo, con sus fotos, talle y detalle real.</p>
+        </div>
+        <!-- card 2 -->
+        <div class="reveal frame rounded-2xl p-7" style="transition-delay:.08s">
+          <div class="w-11 h-11 rounded-full bg-navy text-cream-2 grid place-content-center font-display text-xl">02</div>
+          <h3 class="font-logo text-lg mt-5 text-ink">Todas son únicas</h3>
+          <p class="text-muted mt-2 text-sm leading-relaxed">Elegidas una por una. No hay dos iguales: lo que ves es lo que hay, y no se repite.</p>
+        </div>
+        <!-- card 3 -->
+        <div class="reveal frame rounded-2xl p-7" style="transition-delay:.16s">
+          <div class="w-11 h-11 rounded-full bg-petrol text-cream-2 grid place-content-center font-display text-xl">03</div>
+          <h3 class="font-logo text-lg mt-5 text-ink">Una vez vendidas, no vuelven</h3>
+          <p class="text-muted mt-2 text-sm leading-relaxed">Sin local físico, 100% online desde Córdoba. Si te gusta, es tuya — o de nadie.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NOSOTROS ================= -->
+  <section id="nosotros" class="bg-navy text-cream-2 py-16 sm:py-24 relative overflow-hidden">
+    <div class="ghost-word absolute -bottom-10 -right-4 text-[24vw] leading-none !opacity-[.05] !text-cream-2">IRMÃO</div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+        <!-- Imagen -->
+        <div class="reveal order-2 md:order-1">
+          <div class="relative">
+            <span class="tape -top-3 left-8 -rotate-6"></span>
+            <img src="assets/img/nosotros.jpg" alt="Personaje FALA IRMÃO — bienvenido, ropa con segunda oportunidad"
+                 class="frame rounded-xl w-full object-cover" loading="lazy" />
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="reveal order-1 md:order-2">
+          <span class="pill text-olive mb-5">Nosotros</span>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl leading-[.95]">¿Qué significa <span class="text-olive">Fala Irmão</span>?</h2>
+
+          <p class="mt-6 text-cream/85 leading-relaxed">
+            <em class="font-marker text-2xl text-cream not-italic">“Fala Irmão”</em> significa literalmente
+            <strong class="text-cream">“hablá, hermano”</strong>. Pero es mucho más que una traducción: es un saludo,
+            una invitación a acercarse. Una forma de decir <em>“¿qué onda, hermano, todo bien?”</em>.
+          </p>
+          <p class="mt-4 text-cream/85 leading-relaxed">
+            Una frase que transmite amistad, buena energía y conexión entre personas. Y eso es lo que queremos
+            representar con esta marca — porque creemos que la ropa también conecta historias:
+            <strong class="text-cream">la de quien la eligió primero, la de quien la encuentra después,
+            y la de todos los caminos que todavía le quedan por recorrer.</strong>
+          </p>
+
+          <div class="grid grid-cols-3 gap-3 mt-8">
+            <div class="text-center bg-navy-2/60 rounded-xl py-4 px-2 border border-white/10">
+              <div class="font-display text-3xl text-olive">100%</div>
+              <div class="text-[11px] uppercase tracking-wider text-cream/70 mt-1">Piezas únicas</div>
+            </div>
+            <div class="text-center bg-navy-2/60 rounded-xl py-4 px-2 border border-white/10">
+              <div class="font-display text-3xl text-olive">1×1</div>
+              <div class="text-[11px] uppercase tracking-wider text-cream/70 mt-1">Curadas a mano</div>
+            </div>
+            <div class="text-center bg-navy-2/60 rounded-xl py-4 px-2 border border-white/10">
+              <div class="font-display text-3xl text-olive">♻</div>
+              <div class="text-[11px] uppercase tracking-wider text-cream/70 mt-1">Segunda vida</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Frase destacada -->
+      <div class="reveal mt-14 sm:mt-20 border-t border-white/15 pt-10">
+        <p class="font-display uppercase text-2xl sm:text-4xl leading-tight max-w-4xl">
+          Acá no vas a encontrar cualquier prenda. Vas a encontrar
+          <span class="text-bordo bg-cream-2 px-2">esas que cuesta volver a ver.</span>
+          Elegidas una por una — no hay dos iguales.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRENDAS ================= -->
+  <section id="prendas" class="relative grain bg-sand py-16 sm:py-24 overflow-hidden">
+    <div class="relative z-10 max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+        <!-- Texto + tipos -->
+        <div class="reveal">
+          <span class="pill text-bordo mb-4">Las prendas</span>
+          <h2 class="font-display uppercase text-4xl sm:text-5xl leading-[.95] text-ink">¿Qué vas a <span class="text-bordo">encontrar</span>?</h2>
+          <p class="text-muted mt-5 max-w-md">
+            Seleccionamos prendas <strong class="text-ink">nuevas o de medio uso en excelente estado</strong>.
+            Ropa americana elegida una por una — puro estilo vintage 80s, 90s y retro.
+          </p>
+
+          <div class="flex flex-wrap gap-2.5 mt-6">
+            <span class="pill text-ink !border-ink/30">Buzos</span>
+            <span class="pill text-ink !border-ink/30">Remeras</span>
+            <span class="pill text-ink !border-ink/30">Camperas</span>
+            <span class="pill text-ink !border-ink/30">Pantalones</span>
+            <span class="pill text-ink !border-ink/30">Rompevientos</span>
+            <span class="pill text-bordo">★ Joyitas únicas</span>
+          </div>
+
+          <a data-ig target="_blank" rel="noopener" class="btn btn-navy mt-8">Ver el catálogo en IG</a>
+        </div>
+
+        <!-- Foto de prendas reales -->
+        <div class="reveal relative">
+          <span class="tape -top-3 left-10 -rotate-6"></span>
+          <img src="assets/img/prendas-1.jpg" alt="Camperas y buzos vintage Nike y Adidas seleccionados por FALA IRMÃO"
+               class="frame rounded-xl w-full" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Estado de cada prenda -->
+      <div class="reveal mt-14 sm:mt-16">
+        <p class="font-marker text-2xl sm:text-3xl text-navy mb-6 text-center">Cada prenda que sale, sale así</p>
+        <div class="grid sm:grid-cols-3 gap-4">
+          <div class="frame rounded-2xl p-6 flex items-center gap-4">
+            <span class="w-11 h-11 rounded-full bg-olive text-cream-2 grid place-content-center shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+            </span>
+            <div><span class="block font-logo text-ink">Lavada</span><span class="block text-sm text-muted">Limpia y fresca</span></div>
+          </div>
+          <div class="frame rounded-2xl p-6 flex items-center gap-4">
+            <span class="w-11 h-11 rounded-full bg-olive text-cream-2 grid place-content-center shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+            </span>
+            <div><span class="block font-logo text-ink">Sanitizada</span><span class="block text-sm text-muted">Higienizada 100%</span></div>
+          </div>
+          <div class="frame rounded-2xl p-6 flex items-center gap-4">
+            <span class="w-11 h-11 rounded-full bg-olive text-cream-2 grid place-content-center shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12.5l4.5 4.5L19 7"/></svg>
+            </span>
+            <div><span class="block font-logo text-ink">Lista para usar</span><span class="block text-sm text-muted">Te llega impecable</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner: perchero real -->
+  <div class="relative">
+    <img src="assets/img/prendas-2.jpg" alt="Perchero con prendas vintage seleccionadas" class="w-full h-[260px] sm:h-[380px] object-cover" loading="lazy" />
+    <div class="absolute inset-0 bg-navy-2/60"></div>
+    <div class="absolute inset-0 flex items-center">
+      <div class="max-w-6xl mx-auto px-5 sm:px-8 w-full">
+        <p class="font-display uppercase text-cream-2 text-2xl sm:text-4xl lg:text-5xl leading-tight max-w-2xl">
+          Ropa americana de verdad — <span class="text-olive">elegida una por una.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= CUIDADO ================= -->
+  <section id="cuidado" class="bg-cream-2 py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+      <!-- Imagen guía -->
+      <div class="reveal relative order-2 md:order-1">
+        <span class="tape -top-3 right-10 rotate-6"></span>
+        <img src="assets/img/cuidado.jpg" alt="Guía de cuidado de prendas FALA IRMÃO" class="frame rounded-xl w-full max-w-sm mx-auto" loading="lazy" />
+      </div>
+
+      <!-- Texto + tips -->
+      <div class="reveal order-1 md:order-2">
+        <span class="pill text-petrol mb-4">Cuidado de las prendas</span>
+        <h2 class="font-display uppercase text-4xl sm:text-5xl leading-[.95] text-ink">Cuidá tu <span class="text-bordo">joyita</span></h2>
+        <p class="text-muted mt-4 max-w-md">Gracias por elegir ropa con historia. Para que te dure muchísimo más, cuidala así:</p>
+
+        <div class="grid sm:grid-cols-2 gap-3 mt-6">
+          <div class="flex items-center gap-3 bg-sand/40 rounded-xl p-4 border border-ink/10">
+            <span class="text-petrol shrink-0"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3s6 6.5 6 10.5a6 6 0 0 1-12 0C6 9.5 12 3 12 3Z"/></svg></span>
+            <span class="font-logo text-sm text-ink leading-tight">Lavar con agua fría</span>
+          </div>
+          <div class="flex items-center gap-3 bg-sand/40 rounded-xl p-4 border border-ink/10">
+            <span class="text-bordo shrink-0"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M6 6l12 12"/></svg></span>
+            <span class="font-logo text-sm text-ink leading-tight">No usar lavandina</span>
+          </div>
+          <div class="flex items-center gap-3 bg-sand/40 rounded-xl p-4 border border-ink/10">
+            <span class="text-petrol shrink-0"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19"/></svg></span>
+            <span class="font-logo text-sm text-ink leading-tight">Secar a la sombra</span>
+          </div>
+          <div class="flex items-center gap-3 bg-sand/40 rounded-xl p-4 border border-ink/10">
+            <span class="text-petrol shrink-0"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 4l3 2 3-2 4 3-2 3-2-1v8H9v-8l-2 1-2-3Z"/></svg></span>
+            <span class="font-logo text-sm text-ink leading-tight">Si podés, lavar del revés</span>
+          </div>
+        </div>
+
+        <p class="font-marker text-2xl text-navy mt-7">Usala mucho, vivila más.</p>
+        <p class="text-xs uppercase tracking-[.14em] text-muted font-logo mt-2">Moda circular · Historias reales</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BENEFICIO 15% ================= -->
+  <section class="bg-bordo text-cream-2 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14 sm:py-16 grid md:grid-cols-[1.2fr_.8fr] gap-8 items-center">
+      <div class="reveal">
+        <span class="pill text-cream-2 mb-4 border-cream-2/60">Gracias por tu compra</span>
+        <h2 class="font-display uppercase text-4xl sm:text-6xl leading-[.9]">
+          15% OFF <br><span class="text-olive">en tu segunda compra</span>
+        </h2>
+        <p class="text-cream/85 mt-5 max-w-md">
+          Después de tu primera compra, tu próxima joyita se lleva 15% de descuento.
+          Seguinos en Instagram, mandanos mensaje y aprovechá. Envíos a todo el país desde Córdoba.
+        </p>
+        <div class="flex flex-wrap gap-3 mt-7">
+          <a data-wa target="_blank" rel="noopener" class="btn btn-cream">Quiero mi 15%</a>
+          <a data-ig target="_blank" rel="noopener" class="btn btn-ghost !text-cream-2 !border-cream-2/70 hover:!bg-cream-2 hover:!text-bordo">Seguir @falairmao_</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <img src="assets/img/gracias.jpg" alt="Tarjeta: gracias por tu compra, 15% de descuento" class="frame rounded-xl w-full rotate-1" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTO ================= -->
+  <section id="contacto" class="bg-cream-2 py-16 sm:py-24">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+      <div class="reveal text-center max-w-2xl mx-auto">
+        <span class="pill text-bordo mb-4">Contacto</span>
+        <h2 class="font-display uppercase text-4xl sm:text-5xl leading-[.95] text-ink">Hablá con nosotros, <span class="text-bordo">irmão</span></h2>
+        <p class="text-muted mt-4">Somos 100% online, con base en Córdoba. Escribinos por WhatsApp o Instagram y coordinamos tu hallazgo.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 mt-12 items-start">
+        <!-- Datos de contacto -->
+        <div class="reveal space-y-4">
+          <a data-wa target="_blank" rel="noopener" class="flex items-center gap-4 frame rounded-2xl p-5 hover:-translate-y-1 transition-transform">
+            <span class="w-12 h-12 rounded-full bg-petrol text-cream-2 grid place-content-center shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-1-.3-1.6-.6-2.9-1.3-4.8-4.2-4.9-4.4-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.7-.9c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3Z"/></svg>
+            </span>
+            <span>
+              <span class="block font-logo text-ink">WhatsApp</span>
+              <span class="block text-sm text-muted">Coordiná tu compra al toque</span>
+            </span>
+          </a>
+
+          <a data-ig target="_blank" rel="noopener" class="flex items-center gap-4 frame rounded-2xl p-5 hover:-translate-y-1 transition-transform">
+            <span class="w-12 h-12 rounded-full bg-bordo text-cream-2 grid place-content-center shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <span>
+              <span class="block font-logo text-ink">@falairmao_</span>
+              <span class="block text-sm text-muted">Todos los drops y hallazgos</span>
+            </span>
+          </a>
+
+          <div class="flex items-center gap-4 frame rounded-2xl p-5">
+            <span class="w-12 h-12 rounded-full bg-navy text-cream-2 grid place-content-center shrink-0">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-5.7-7-11a7 7 0 1 1 14 0c0 5.3-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            </span>
+            <span>
+              <span class="block font-logo text-ink">Córdoba, Argentina</span>
+              <span class="block text-sm text-muted">Sin local físico · Envíos a todo el país</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Formulario -->
+        <form id="contactForm" class="reveal frame rounded-2xl p-6 sm:p-8 space-y-4">
+          <p class="font-logo text-ink text-lg">Escribinos</p>
+          <div>
+            <label class="text-xs uppercase tracking-wider text-muted font-logo" for="nombre">Tu nombre</label>
+            <input id="nombre" name="nombre" type="text" required placeholder="Cómo te llamás"
+                   class="mt-1 w-full rounded-lg border border-ink/15 bg-cream px-4 py-3 text-ink outline-none focus:border-bordo transition-colors" />
+          </div>
+          <div>
+            <label class="text-xs uppercase tracking-wider text-muted font-logo" for="prenda">¿Qué buscás? (opcional)</label>
+            <input id="prenda" name="prenda" type="text" placeholder="Campera vintage, buzo, talle L…"
+                   class="mt-1 w-full rounded-lg border border-ink/15 bg-cream px-4 py-3 text-ink outline-none focus:border-bordo transition-colors" />
+          </div>
+          <div>
+            <label class="text-xs uppercase tracking-wider text-muted font-logo" for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Contanos qué necesitás…"
+                      class="mt-1 w-full rounded-lg border border-ink/15 bg-cream px-4 py-3 text-ink outline-none focus:border-bordo transition-colors resize-none"></textarea>
+          </div>
+          <button type="submit" class="btn btn-bordo w-full justify-center">Enviar por WhatsApp</button>
+          <p class="text-[11px] text-muted text-center">Se abre WhatsApp con tu mensaje listo para enviar.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-navy-2 text-cream-2/80">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 py-14">
+      <div class="flex flex-col md:flex-row gap-10 md:items-center md:justify-between">
+        <div>
+          <a href="#inicio" class="oval-logo on-dark text-[15px]"><span>FALA</span><span>IRMÃO<span class="dot">.</span></span></a>
+          <p class="mt-4 max-w-xs text-sm text-cream-2/60">Ropa americana de primera calidad. Vintage, 90s, oversize y retro — con base en Córdoba, Argentina.</p>
+        </div>
+        <div class="flex flex-col gap-3 text-sm font-logo uppercase tracking-wider">
+          <a href="#inicio" class="hover:text-cream-2 transition-colors">Inicio</a>
+          <a href="#nosotros" class="hover:text-cream-2 transition-colors">Nosotros</a>
+          <a href="#contacto" class="hover:text-cream-2 transition-colors">Contacto</a>
+        </div>
+        <div class="flex gap-3">
+          <a data-ig target="_blank" rel="noopener" aria-label="Instagram" class="w-11 h-11 rounded-full border border-cream-2/30 grid place-content-center hover:bg-cream-2 hover:text-navy-2 transition-colors">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a data-wa target="_blank" rel="noopener" aria-label="WhatsApp" class="w-11 h-11 rounded-full border border-cream-2/30 grid place-content-center hover:bg-cream-2 hover:text-navy-2 transition-colors">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.7 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-1-.3-1.6-.6-2.9-1.3-4.8-4.2-4.9-4.4-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.2.2-.3.4-.1.7.2.3.9 1.4 1.9 2.3 1.3 1.1 2.3 1.5 2.6 1.6.2.1.4.1.6-.1l.7-.9c.2-.3.4-.2.7-.1l2 .9c.3.1.5.2.5.4.1.1.1.7-.1 1.3Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-cream-2/15 mt-10 pt-6 flex flex-col sm:flex-row gap-2 justify-between text-xs text-cream-2/50">
+        <span>© <span id="year">2025</span> FALA IRMÃO® — Todos los derechos reservados.</span>
+        <span class="font-marker text-sm text-cream-2/70">Fala irmão… todo bien 🤝</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

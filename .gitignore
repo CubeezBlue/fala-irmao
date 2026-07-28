@@ -1,0 +1,9 @@
+# Carpeta con las imágenes originales del zip (no se usan en el sitio)
+referencias/
+
+# Temporales / sistema
+_zip*/
+*.log
+.DS_Store
+Thumbs.db
+node_modules/
