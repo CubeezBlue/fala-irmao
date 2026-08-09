@@ -19,15 +19,16 @@ Todos los datos de contacto están en un solo lugar: **`assets/js/main.js`**, ar
 
 ```js
 const CONFIG = {
-  whatsapp: "5493510000000",   // 👈 poné tu número real (formato: 549 + código + número, sin + ni espacios)
-  instagram: "falairmao_",     // usuario sin @  (ya está el tuyo)
-  email: "hola@falairmao.com"  // opcional
+  whatsapp: "5493512093734",                       // +54 9 3512 09-3734
+  instagram: "falairmao_",                         // usuario sin @
+  tienda: "https://paycomerce.com/t/fala-irmao",   // tienda online (PayComerce)
+  email: "hola@falairmao.com"                      // opcional
 };
 ```
 
-- El **número de WhatsApp es un placeholder** (`5493510000000`). Reemplazalo por el real:
-  los botones "Comprar", "Quiero mi 15%" y el formulario abren WhatsApp con el mensaje ya escrito.
-- El Instagram **@falairmao_** ya está cargado en todos los botones y links.
+- **WhatsApp**: los botones "Consultar por WhatsApp", "Quiero mi 15%" y el formulario abren WhatsApp con el mensaje ya escrito.
+- **Tienda**: los botones "Tienda" / "Ir a la tienda" llevan a tu storefront de PayComerce.
+- **Instagram** @falairmao_ ya está cargado en todos los botones y links.
 
 ## Estructura
 ```

@@ -1,15 +1,16 @@
 /* =========================================================
    FALA IRMÃO — interacciones
    ---------------------------------------------------------
-   ⚙️  EDITÁ ACÁ TUS DATOS DE CONTACTO:
+   ⚙️  EDITÁ ACÁ TUS DATOS:
    - whatsapp: número en formato internacional, sin + ni espacios
-     (Argentina Córdoba suele ser 549351XXXXXXX)
    - instagram: usuario sin @
+   - tienda: URL de tu tienda online
    ========================================================= */
 const CONFIG = {
-  whatsapp: "5493510000000",      // 👈 reemplazá por tu número real
+  whatsapp: "5493512093734",                         // +54 9 3512 09-3734
   instagram: "falairmao_",
-  email: "hola@falairmao.com"      // 👈 opcional, reemplazá si tenés
+  tienda: "https://paycomerce.com/t/fala-irmao",     // tienda online (PayComerce)
+  email: "hola@falairmao.com"                        // 👈 opcional, reemplazá si tenés
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const msg = a.dataset.wa || "¡Hola FALA IRMÃO! Vi la web y quiero preguntar por un hallazgo.";
     a.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg)}`;
   });
+  document.querySelectorAll("[data-tienda]").forEach(a => (a.href = CONFIG.tienda));
 
   /* ---- Año en el footer ---- */
   const y = document.getElementById("year");
@@ -72,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---- Nav activo según sección visible ---- */
-  const sections = ["inicio", "nosotros", "prendas", "contacto"].map(id => document.getElementById(id)).filter(Boolean);
+  const sections = ["inicio", "nosotros", "prendas", "tienda", "contacto"].map(id => document.getElementById(id)).filter(Boolean);
   const navLinks = document.querySelectorAll(".nav-link");
   const spy = new IntersectionObserver((entries) => {
     entries.forEach(e => {
